@@ -1,9 +1,23 @@
-{% extends 'app/base.html' %}
+
+
+{% extends 'base.html' %}
 {% load static %}
 
 {% block contenidoQueCambia %}
     
-
+<div class="container">
+    <div class="row justify-content-center">  <!-- Alinea el contenido a la izquierda -->
+        <div class="col-md-4">  <!-- Controla el ancho del formulario -->
+            <form action="" method="POST" class="ms-3">  <!-- Margen izquierdo de 1rem -->
+                <table>
+                    {{ formulario.as_table }} {% csrf_token %}
+                </table>
+                
+                <input type="submit" value="Registrar" class="btn btn-secondary mt-5">
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock contenidoQueCambia %}
     
