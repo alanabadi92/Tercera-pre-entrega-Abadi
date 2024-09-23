@@ -7,15 +7,15 @@ from django.db import models
 #Posteos
 
 class Usuario(models.Model):
-    nombre = models.CharField(max_length=80)
-    apellido = models.CharField(max_length=80)
+    nombre_usuario = models.CharField(max_length=80)
+    nombre_completo = models.CharField(max_length=80)
     email = models.EmailField()
     contrasena = models.CharField(max_length=80)
     genero = models.CharField(max_length=80)
     edad = models.IntegerField()
 
     def __str__(self) -> str:
-        return self.nombre
+        return self.nombre_usuario
     
 class Test_Eneagrama(models.Model):
     eneatipo = models.IntegerField()
@@ -23,6 +23,11 @@ class Test_Eneagrama(models.Model):
     energia3 = models.IntegerField()
 
 class Posteo(models.Model):
+    titulo = models.CharField(max_length=80, default="Sin titulo")
     imagen = models.ImageField()
     descripcion = models.TextField()
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return self.titulo
+
