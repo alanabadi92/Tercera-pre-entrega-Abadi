@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block contenidoQueCambia %}
-    
+
 <div class="container"></div>
     <div class="row justify-content-center"> 
         <div class="col-md-4"> 
             
-            <form action="" method="POST" class="ms-3">  
+            <form action="" enctype="multipart/form-data" method="POST" class="ms-3">  
                 <table>
                     {{ formulario.as_table }} {% csrf_token %}
                 </table>

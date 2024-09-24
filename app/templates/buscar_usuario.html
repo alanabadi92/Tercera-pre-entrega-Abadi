@@ -1,9 +1,41 @@
-{% extends 'app/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block contenidoQueCambia %}
     
+<div class="container">
+    <div class="row justify-content-center"> 
+        <div class="col-md-4"> 
+            
+            <form action="" method="GET" class="ms-3">  
+                <table>
+                    {{ formulario.as_table }} 
+                    {% csrf_token %}
+                </table>
+                
+                <input type="submit" value="Buscar" class="btn btn-secondary mt-5">
+            </form>
+        </div>
 
+        <div class="mt-5 text-center">
+
+            {% if usuarios %}
+                <h2>Resultados de búsqueda:</h2>
+                <ul style="list-style-type: none">
+                    {% for usuario in usuarios %}
+                        <li> Nombre usuario: {{usuario.nombre_usuario}}</li>
+                        <li> Nombre completo: {{usuario.nombre_completo}}</li>
+                        <li> Email: {{usuario.email}}</li>
+                        <li> Edad: {{usuario.edad}}</li>
+                        <li> Género: {{usuario.genero}}</li>
+                    {% endfor %}
+                </ul>
+            {% elif usuarios is not None %}
+                <p>No se encontraron usuarios.</p>
+            {% endif %}
+        
+        </div>
+    </div>
+</div>
 
 {% endblock contenidoQueCambia %}
-    

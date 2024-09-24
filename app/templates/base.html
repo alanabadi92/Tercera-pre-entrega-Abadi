@@ -7,11 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Tercera pre-entrega+Abadi</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="/startbootstrap-landing-page-gh-pages/assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-        <!-- Google fonts-->
+        
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'startbootstrap-landing-page-gh-pages/css/styles.css' %}" rel="stylesheet" />    
@@ -23,9 +19,9 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'bienvenida' %}">Inicio</a>
                 <a class="btn btn-primary" href="{% url 'ingresar_usuario' %}">Ingresar Usuario</a>
-                <a class="btn btn-primary" href="">Hacer test</a>
+                <a class="btn btn-primary" href="{% url 'hacer_test' %}">Hacer test</a>
                 <a class="btn btn-primary" href="{% url 'hacer_posteo' %}">Postear</a>
-                <a class="btn btn-primary" href="">Buscar Usuario</a>
+                <a class="btn btn-primary" href="{% url 'buscar_usuario' %}">Buscar Usuario</a>
                 
                 
                 
@@ -35,7 +31,7 @@
        
         <!-- Masthead-->
         <header class="masthead">
-            <div class="container position-relative">
+            <div class="container position-relative text-white">
                                            
                             
                             {% block contenidoQueCambia %}
@@ -47,33 +43,11 @@
         </header>
       
         <!-- Footer-->
-        <footer class="footer bg-light">
+        <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">About</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contact</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-6 h-100  text-lg-start ">
+                        <h4 class="mb-4 mb-lg-0">&copy; Tercera pre-entrega+Abadi</h4>
                     </div>
                 </div>
             </div>
